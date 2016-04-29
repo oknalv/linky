@@ -1,0 +1,3 @@
+tags = {
+    "no-tags" : "text"
+}

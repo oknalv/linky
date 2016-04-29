@@ -1,0 +1,10 @@
+{% extends "templates/layout.html" %}
+{% block body %}
+    {% if tags %}
+        {% for key, value in tags.iteritems() %}
+            <a href="/?tag={{ key }}" style="font-size: {{ value }};">{{ key }}</a>
+        {% endfor %}
+    {% else %}
+        <div id="no-tags" class="well"></div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,50 @@
+application: linky-als
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  script: main.app
+
+- url: /changelang
+  script: changelang.app
+
+- url: /addlink
+  script: addlink.app
+
+- url: /deletelink
+  script: deletelink.app
+
+- url: /modifylink
+  script: modifylink.app
+
+- url: /moveup
+  script: moveup.app
+
+- url: /movedown
+  script: movedown.app
+
+- url: /tags
+  script: tags.app
+- url: /img
+  static_dir: img
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /fonts
+  static_dir: fonts
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: "2.6"
